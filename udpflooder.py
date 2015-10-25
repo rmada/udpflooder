@@ -2,8 +2,8 @@
 import socket, sys
 
 data = "qwertyuiopasdfghjklzxcvbnm0123456789~!@#$%^&*()+=`;?.,<>\|{}[]"
-target = sys.argv[1]
-port = sys.argv[2]
+target = raw_input("Target: ")
+port = input("Port: ")
 adr = (target,port)
 s = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 while True:
